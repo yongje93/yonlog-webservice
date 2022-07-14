@@ -1,6 +1,5 @@
 package com.yonlog.coding.domain.item;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
