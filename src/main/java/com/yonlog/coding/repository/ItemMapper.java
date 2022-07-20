@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 @Mapper
 public interface ItemMapper {
-    List<Item> findAll();
+    List<Item> findItems();
 }

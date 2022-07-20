@@ -5,7 +5,7 @@
 
 <mapper namespace="com.yonlog.coding.repository.ItemMapper">
 
-    <select id="findAll" resultType="com.yonlog.coding.domain.item.Book">
+    <select id="findItems" resultType="com.yonlog.coding.domain.item.Book">
         select id, name, price, stockQuantity, author, publisher
         from book
     </select>

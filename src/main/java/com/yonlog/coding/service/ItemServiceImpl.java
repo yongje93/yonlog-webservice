@@ -14,7 +14,7 @@ public class ItemServiceImpl implements ItemService {
     private final ItemMapper itemMapper;
 
     @Override
-    public List<Item> findAll() {
-        return itemMapper.findAll();
+    public List<Item> findItems() {
+        return itemMapper.findItems();
     }
 }
