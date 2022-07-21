@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface ItemService {
     List<Item> findItems();
+
+    void saveItem(Item item);
 }

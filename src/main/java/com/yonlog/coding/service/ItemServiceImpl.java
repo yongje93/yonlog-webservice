@@ -17,4 +17,9 @@ public class ItemServiceImpl implements ItemService {
     public List<Item> findItems() {
         return itemMapper.findItems();
     }
+
+    @Override
+    public void saveItem(Item item) {
+        itemMapper.save(item);
+    }
 }

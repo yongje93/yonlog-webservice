@@ -10,4 +10,9 @@
         from book
     </select>
 
+    <insert id="save" parameterType="com.yonlog.coding.domain.item.Book">
+        insert into book(name, price, stockQuantity, author, publisher)
+        values (#{name}, #{price}, #{stockQuantity}, #{author}, #{publisher})
+    </insert>
+
 </mapper>

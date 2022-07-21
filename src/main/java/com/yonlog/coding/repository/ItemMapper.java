@@ -10,4 +10,6 @@ import java.util.List;
 @Mapper
 public interface ItemMapper {
     List<Item> findItems();
+
+    void save(Item item);
 }
