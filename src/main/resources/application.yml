@@ -13,3 +13,4 @@ spring:
 mybatis:
   config-location: classpath:mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.yonlog.coding.domain.item
