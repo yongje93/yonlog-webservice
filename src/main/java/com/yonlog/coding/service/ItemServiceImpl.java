@@ -19,6 +19,19 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
+    public Item findOne(Long id) {
+        return itemMapper.findOne(id);
+    }
+
+    public void updateItem(Long itemId, String name, int price, int stockQuantity) {
+        Item findItem = itemMapper.findOne(itemId);
+        findItem.setName(name);
+        findItem.setPrice(price);
+        findItem.setStockQuantity(stockQuantity);
+        itemMapper.updateOne(findItem);
+    }
+
+    @Override
     public void saveItem(Item item) {
         itemMapper.save(item);
     }

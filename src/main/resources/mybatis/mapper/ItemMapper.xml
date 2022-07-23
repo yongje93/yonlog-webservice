@@ -4,15 +4,28 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.yonlog.coding.repository.ItemMapper">
-
-    <select id="findItems" resultType="com.yonlog.coding.domain.item.Book">
+    <!-- item 전체 조회 -->
+    <select id="findItems" resultType="Book">
         select id, name, price, stockQuantity, author, publisher
         from book
     </select>
-
-    <insert id="save" parameterType="com.yonlog.coding.domain.item.Book">
+    <!-- item 한건 조회 -->
+    <select id="findOne" resultType="Book">
+        select id, name, price, stockQuantity, author, publisher
+        from book
+        where id = #{id}
+    </select>
+    <!-- item 저장 -->
+    <insert id="save" parameterType="Book">
         insert into book(name, price, stockQuantity, author, publisher)
         values (#{name}, #{price}, #{stockQuantity}, #{author}, #{publisher})
     </insert>
-
+    <!-- item 업데이트 -->
+    <update id="updateOne" parameterType="Book">
+        update book
+        set name = #{name},
+            price = #{price},
+            stockQuantity = #{stockQuantity}
+        where id = #{id}
+    </update>
 </mapper>

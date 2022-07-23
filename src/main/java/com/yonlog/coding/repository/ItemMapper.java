@@ -11,5 +11,10 @@ import java.util.List;
 public interface ItemMapper {
     List<Item> findItems();
 
+    Item findOne(Long id);
+
     void save(Item item);
+
+    void updateOne(Item item);
+
 }
