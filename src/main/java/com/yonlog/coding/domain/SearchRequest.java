@@ -3,11 +3,15 @@ package com.yonlog.coding.domain;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.NotBlank;
+
 @Getter
 @Setter
 public class SearchRequest {
-    private String name;
-
-    private String author;
+    /**
+     * 검색어
+     */
+    @NotBlank(message = "검색어를 입력해주세요.")
+    private String keyword;
 
 }
