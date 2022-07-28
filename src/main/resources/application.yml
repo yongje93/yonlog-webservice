@@ -19,8 +19,9 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
     display-request-duration: true
-    operationsSorter: ALPHA
-    groups-order: DESC
+    tags-sorter: alpha
+    operations-sorter: alpha
+    groups-order: desc
     disable-swagger-default-url: true
 
 server:
