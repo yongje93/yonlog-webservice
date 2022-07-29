@@ -1,4 +1,4 @@
-package com.yonlog.coding.domain;
+package com.yonlog.coding.dto;
 
 import lombok.Getter;
 import lombok.Setter;

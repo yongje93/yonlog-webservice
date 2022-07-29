@@ -1,8 +1,8 @@
 package com.yonlog.coding.service;
 
 import com.yonlog.coding.Constants;
-import com.yonlog.coding.domain.SearchRequest;
-import com.yonlog.coding.domain.SearchResponse;
+import com.yonlog.coding.dto.SearchRequest;
+import com.yonlog.coding.dto.SearchResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;

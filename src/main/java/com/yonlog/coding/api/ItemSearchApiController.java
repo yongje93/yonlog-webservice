@@ -1,7 +1,7 @@
 package com.yonlog.coding.api;
 
-import com.yonlog.coding.domain.SearchRequest;
-import com.yonlog.coding.domain.SearchResponse;
+import com.yonlog.coding.dto.SearchRequest;
+import com.yonlog.coding.dto.SearchResponse;
 import com.yonlog.coding.service.ItemSearchService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
