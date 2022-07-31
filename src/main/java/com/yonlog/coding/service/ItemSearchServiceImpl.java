@@ -1,6 +1,6 @@
 package com.yonlog.coding.service;
 
-import com.yonlog.coding.Constants;
+import com.yonlog.coding.config.Constants;
 import com.yonlog.coding.dto.SearchRequest;
 import com.yonlog.coding.dto.SearchResponse;
 import lombok.extern.slf4j.Slf4j;

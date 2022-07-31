@@ -1,4 +1,4 @@
-package com.yonlog.coding;
+package com.yonlog.coding.config;
 
 public final class Constants {
 

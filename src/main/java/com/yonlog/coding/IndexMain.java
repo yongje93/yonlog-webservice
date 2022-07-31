@@ -1,5 +1,6 @@
 package com.yonlog.coding;
 
+import com.yonlog.coding.config.Constants;
 import com.yonlog.coding.domain.item.Book;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
