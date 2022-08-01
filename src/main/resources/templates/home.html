@@ -7,6 +7,17 @@
 <body>
 <div class="container">
     <div th:replace="fragments/bodyHeader :: bodyHeader"></div>
+
+    <form id="searchForm">
+        <div class="mx-quto input-group mb-5">
+            <input type="text" class="form-control" placeholder="검색어를 입력하세요." aria-label="search"
+                   name="keyword" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-success" type="button" id="button-addon2" onclick="doSearch()">검색</button>
+            </div>
+        </div>
+    </form>
+
     <div class="jumbotron">
         <h1>HELLO SHOP</h1>
         <p class="lead">회원 기능</p>
