@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,13 +33,12 @@ public class ItemSearchApiController {
 
     @Operation(description = "검색 파라미터를 이용하여 질의한 결과를 반환합니다.")
     @ApiResponses({
-            @ApiResponse(responseCode = "200", description = "OK", content = {@Content(mediaType = "applic ation/json", schema = @Schema(implementation = SearchResponse.class))}),
+            @ApiResponse(responseCode = "200", description = "OK", content = {@Content(mediaType = "application/json", schema = @Schema(implementation = SearchResponse.class))}),
             @ApiResponse(responseCode = "500", description = "Internal server error", content = @Content),
             @ApiResponse(responseCode = "404", description = "Not found", content = @Content)
     })
     @PostMapping(value = "", produces = "application/json; charset=utf8")
-    public ResponseEntity<SearchResponse> search(SearchRequest request, BindingResult bindingResult) {
-
+    public ResponseEntity<SearchResponse> search(@RequestBody SearchRequest request, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             SearchResponse response = new SearchResponse();
 

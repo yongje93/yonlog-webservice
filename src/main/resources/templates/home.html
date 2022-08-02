@@ -8,15 +8,13 @@
 <div class="container">
     <div th:replace="fragments/bodyHeader :: bodyHeader"></div>
 
-    <form id="searchForm">
-        <div class="mx-quto input-group mb-5">
-            <input type="text" class="form-control" placeholder="검색어를 입력하세요." aria-label="search"
-                   name="keyword" aria-describedby="button-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-success" type="button" id="button-addon2" onclick="doSearch()">검색</button>
-            </div>
+    <div class="mx-quto input-group mb-5">
+        <input type="text" class="form-control" placeholder="검색어를 입력하세요." aria-label="search"
+               id="keyword" aria-describedby="button-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-success btn4search" type="button" id="button-addon2">검색</button>
         </div>
-    </form>
+    </div>
 
     <div class="jumbotron">
         <h1>HELLO SHOP</h1>
@@ -38,3 +36,10 @@
     </div>
     <div th:replace="fragments/footer :: footer"></div>
 </div> <!-- /container -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script th:src="@{/js/search.js}"></script>
+
+</body>
