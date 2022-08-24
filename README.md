@@ -24,12 +24,12 @@
 
 ## 실행 방법
 * 외장 톰캣 이용시: Tomcat에 프로젝트 추가 후, Tomcat start
-  > VM 옵션 필요  
-  -Dspring.profiles.active={local,dev,prod 중 선택}
+  > application.yml에서 active 입력  
+  spring.profiles.active: {local,dev,prod 중 선택}
 
 * 내장 톰캣 이용시: com.yonlog.coding.CodingApplication 실행
-  > VM 옵션 필요  
-  -Dspring.profiles.active={local,dev,prod 중 선택}
+  > application.yml에서 active 입력  
+  spring.profiles.active: {local,dev,prod 중 선택}
 
 * Swagger URL : <http://127.0.0.1:8080/swagger-ui.html>
 
