@@ -28,6 +28,10 @@ springdoc:
 server:
   port: 8080
 
+logging:
+  level:
+    org.hibernate.sql: debug
+
 ---
 spring:
   config:
@@ -38,6 +42,14 @@ spring:
     username: root
     password: yonlog!23
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
 
 mybatis:
   config-location: classpath:mybatis-config.xml
