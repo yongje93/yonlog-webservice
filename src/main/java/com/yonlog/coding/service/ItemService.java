@@ -1,15 +1,40 @@
 package com.yonlog.coding.service;
 
 import com.yonlog.coding.domain.item.Item;
+import com.yonlog.coding.repository.ItemRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public interface ItemService {
-    List<Item> findItems();
+@Service
+@RequiredArgsConstructor
+public class ItemService {
 
-    Item findOne(Long id);
+    private final ItemRepository itemRepository;
 
-    void saveItem(Item item);
+    @Transactional
+    public void saveItem(Item item) {
+        itemRepository.save(item);
+    }
 
-    void updateItem(Long itemId, String name, int price, int stockQuantity);
+    @Transactional
+    public void updateItem(Long itemId, String name, int price, int stockQuantity) {
+        Item findItem = itemRepository.findById(itemId)
+                .orElseThrow(IllegalArgumentException::new);
+        findItem.setName(name);
+        findItem.setPrice(price);
+        findItem.setStockQuantity(stockQuantity);
+    }
+
+    public List<Item> findItems() {
+        return itemRepository.findAll();
+    }
+
+    public Item findOne(Long itemId) {
+        return itemRepository.findById(itemId)
+                .orElseThrow(IllegalArgumentException::new);
+    }
+
 }
