@@ -50,8 +50,3 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
-
-mybatis:
-  config-location: classpath:mybatis-config.xml
-  mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.yonlog.coding.domain.item

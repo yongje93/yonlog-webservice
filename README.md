@@ -10,7 +10,6 @@
 │      │   └── com.yonlog.coding        << 소스 파일 >>
 │      └── resources
 │           ├── application.yml         << 환경설정 >>
-│           └── mybatis-config.xml      << Mybatis 설정 >>
 │           
 ├── gradle                              << Gradle >>
 │    └── wrapper
@@ -36,4 +35,4 @@
 ## 환경설정
 1. application.yml
 * Spring 및 SpringDoc 관련 설정  
-* DB 정보 및 Mybatis 설정
+* DB 정보 및 JPA 설정
