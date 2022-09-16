@@ -12,27 +12,27 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ItemService {
 
-    private final ItemRepository itemRepository;
+    private final ItemRepository repository;
 
     @Transactional
     public void saveItem(Item item) {
-        itemRepository.save(item);
+        repository.save(item);
     }
 
     @Transactional
     public void updateItem(Long itemId, String name, int price, int stockQuantity) {
-        Item findItem = itemRepository.findItemById(itemId);
+        Item findItem = repository.findItemById(itemId);
         findItem.setName(name);
         findItem.setPrice(price);
         findItem.setStockQuantity(stockQuantity);
     }
 
     public List<Item> findItems() {
-        return itemRepository.findAll();
+        return repository.findAll();
     }
 
     public Item findOne(Long itemId) {
-        return itemRepository.findItemById(itemId);
+        return repository.findItemById(itemId);
     }
 
 }
