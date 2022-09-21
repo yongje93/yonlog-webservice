@@ -9,7 +9,9 @@
 │      ├── java
 │      │   └── com.yonlog.coding        << 소스 파일 >>
 │      └── resources
-│           ├── application.yml         << 환경설정 >>
+│           ├── static                  << css, js 등  >>
+│           ├── templates               << thymeleaf 관련 >>
+│           └── application.yml         << 환경설정 >>
 │           
 ├── gradle                              << Gradle >>
 │    └── wrapper
